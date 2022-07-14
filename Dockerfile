@@ -81,7 +81,7 @@ WORKDIR /
 
 RUN echo "-- installing grpc" && \
     cd /var/local/git/grpc && mkdir -p cmake/build && cd cmake/build && \
-    cmake ../.. -DRPC_INSTALL=ON -DCMAKE_BUILD_TYPE=Release -DgRPC_SSL_PROVIDER=package && \
+    cmake ../.. -DgRPC_INSTALL=ON -DCMAKE_BUILD_TYPE=Release -DgRPC_SSL_PROVIDER=package -DgRPC_PROTOBUF_PROVIDER=package && \
     make -j 4 && make install && make clean && ldconfig
     
     
