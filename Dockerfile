@@ -89,7 +89,7 @@ RUN echo "-- installing grpc" && \
 RUN pip3 install grpcio 
 RUN pip3 install pytest
 
-RUN python -m pip install grpcio-tools
+RUN python -m pip install grpcio-tools && pip install python-statemachine
 
 
 
